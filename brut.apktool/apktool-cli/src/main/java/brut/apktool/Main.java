@@ -689,8 +689,8 @@ public class Main {
         logger.addHandler(handler);
 
         if (verbosity == Verbosity.VERBOSE) {
-            handler.setLevel(Level.ALL);
-            logger.setLevel(Level.ALL);
+            handler.setLevel(Level.INFO);
+            logger.setLevel(Level.INFO);
         }
     }
 
@@ -703,7 +703,7 @@ public class Main {
     }
 
     private enum Verbosity {
-        NORMAL, VERBOSE, QUIET
+        NORMAL, VERBOSE, QUIET, INFO
     }
 
     private static boolean advanceMode = false;
