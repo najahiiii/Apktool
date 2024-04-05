@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - personal
     paths:
       - 'gradle/wrapper/gradle-wrapper.jar'
   pull_request:
