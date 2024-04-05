@@ -1,9 +1,9 @@
 name: Analyze
 on:
   push:
-    branches: [master]
+    branches: [master, personal]
   pull_request:
-    branches: [master]
+    branches: [master, personal]
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
