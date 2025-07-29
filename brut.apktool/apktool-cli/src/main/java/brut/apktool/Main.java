@@ -36,7 +36,7 @@ import java.util.logging.*;
  * Main entry point of apktool.
  */
 public class Main {
-    private enum Verbosity { NORMAL, VERBOSE, QUIET }
+    private enum Verbosity { NORMAL, VERBOSE, QUIET, INFO }
 
     private static final Option verboseOption = Option.builder("v")
             .longOpt("verbose")
@@ -830,8 +830,8 @@ public class Main {
         logger.addHandler(handler);
 
         if (verbosity == Verbosity.VERBOSE) {
-            handler.setLevel(Level.ALL);
-            logger.setLevel(Level.ALL);
+            handler.setLevel(Level.INFO);
+            logger.setLevel(Level.INFO);
         }
     }
 }
