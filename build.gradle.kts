@@ -1,7 +1,7 @@
 import java.io.ByteArrayOutputStream
 
 val version = "2.12.1"
-val suffix = "SNAPSHOT"
+val suffix = System.getenv("SUFFIX") ?: "SNAPSHOT"
 
 // Strings embedded into the build.
 var gitRevision by extra("")
